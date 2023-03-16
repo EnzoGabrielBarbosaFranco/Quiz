@@ -39,18 +39,18 @@ const App = () => {
 
   const checaResposta = (e: any) => {
     if (!fimDeJogo) {
-      
+
       const resposta = e.currentTarget.value;
-   
-      const correto = perguntas[numero].resposta_certa === resposta;
-     
+
+      const correto = perguntas[numero].correct_answer === resposta;
+
       if (correto) setPontos((prev) => prev + 1);
-      
+
       const ObjetoDeResposta = {
-        pergunta: perguntas[numero].pergunta,
+        pergunta: perguntas[numero].question,
         resposta,
         correto,
-        respostaCerta: perguntas[numero].resposta_certa,
+        respostaCerta: perguntas[numero].correct_answer,
       };
       setRespostasDoUsuario((prev) => [...prev, ObjetoDeResposta]);
     }
@@ -64,20 +64,34 @@ const App = () => {
     } else {
       setNumero(proximaPergunta);
     }
-  }
-};
+  };
 
-// return (
-// <div className="App">
-//   <h1>React Quiz</h1>
-//   {fimDeJogo || respostaDoUsuario.length === PERGUNTAS_TOTAIS ? (
-//     <button className='comecar' onClick={comecaQuiz}>
-//       Começar
-//     </button>
-//   ) : null}
-//   {!fimDeJogo ? <p className='pontos'> Pontos: </p> : null}
-//   {carregar && <p>Carregando Perguntas... </p>}
-//   {!carregar}
-// </div>
-// );
+  return (
+    <div className="App">
+      <h1>React Quiz</h1>
+      {fimDeJogo || respostasDoUsuario.length === PERGUNTAS_TOTAIS ? (
+        <button className='comecar' onClick={comecaQuiz}>
+          Começar
+        </button>
+      ) : null}
+      {!fimDeJogo ? <p className='pontos'> Pontos: </p> : null}
+      {carregar && <p>Carregando Perguntas... </p>}
+      {!carregar && !fimDeJogo && (
+        <CartaoDePergunta
+          numeroDaPergunta={numero + 1}
+          perguntasTotais={PERGUNTAS_TOTAIS}
+          pergunta={perguntas[numero].question}
+          respostas={perguntas[numero].respostas}
+          respostaDoUsuario={respostasDoUsuario ? respostasDoUsuario[numero] : undefined}
+          repetirChamada={checaResposta}
+        />
+      )}
+      <button className='proximo' onClick={proximaPergunta}>
+        Próxima Pergunta
+      </button>
+
+    </div>
+  );
+
+};
 export default App;
