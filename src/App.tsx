@@ -42,15 +42,15 @@ const App = () => {
 
       const resposta = e.currentTarget.value;
 
-      const correto = perguntas[numero].correct_answer === resposta;
+      const correto = perguntas[numero].resposta_correta === resposta;
 
       if (correto) setPontos((prev) => prev + 1);
 
       const ObjetoDeResposta = {
-        pergunta: perguntas[numero].question,
+        pergunta: perguntas[numero].pergunta,
         resposta,
         correto,
-        respostaCerta: perguntas[numero].correct_answer,
+        respostaCerta: perguntas[numero].resposta_correta,
       };
       setRespostasDoUsuario((prev) => [...prev, ObjetoDeResposta]);
     }
@@ -80,7 +80,7 @@ const App = () => {
         <CartaoDePergunta
           numeroDaPergunta={numero + 1}
           perguntasTotais={PERGUNTAS_TOTAIS}
-          pergunta={perguntas[numero].question}
+          pergunta={perguntas[numero].pergunta}
           respostas={perguntas[numero].respostas}
           respostaDoUsuario={respostasDoUsuario ? respostasDoUsuario[numero] : undefined}
           repetirChamada={checaResposta}

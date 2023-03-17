@@ -1,0 +1,108 @@
+{
+    "resultado": [
+        {
+            "categoria": "Marcas",
+            "tipo": "boolean",
+            "dificuldade": "dificil",
+            "pergunta": "O McDonals possui 435 estabelecimestos ao redor do mundo.",
+            "resposta_correta": "False",
+            "resposta_incorreta": [
+                "True"
+            ],
+            "repetirChamada": "",
+            "respostaDoUsuario":"",
+            "numeroDaPergunta":"",
+            "perguntasTotais":"" 
+        },
+        {
+            "categoria": "Geografia",
+            "tipo": "boolean",
+            "dificuldade": "facil",
+            "pergunta": "A capital do Brasil é Brasilia?",
+            "resposta_correta": "True",
+            "resposta_incorreta": [
+                "False"
+            ]
+        },
+        {
+            "categoria": "Futebol",
+            "tipo": "boolean",
+            "dificuldade": "facil",
+            "pergunta": "O Neymar é Paquistanês?",
+            "resposta_correta": "False",
+            "resposta_incorreta": [
+                "True"
+            ]
+        },
+        {
+            "categoria": "Cinema",
+            "tipo": "boolean",
+            "dificuldade": "medio",
+            "pergunta": "O Flavio poderia fazer o filme do Coisa?",
+            "resposta_correta": "True",
+            "resposta_incorreta": [
+                "False"
+            ]
+        },
+        {
+            "categoria": "Ciencia",
+            "tipo": "boolean",
+            "dificuldade": "dificil",
+            "pergunta": "O ornitorrinco é considerado um mamifero?",
+            "resposta_correta": "True",
+            "resposta_incorreta": [
+                "False"
+            ]
+        },
+        {
+            "categoria": "TI",
+            "tipo": "boolean",
+            "dificuldade": "facil",
+            "pergunta": "O HTML é uma linguagem de programação?",
+            "resposta_correta": "False",
+            "resposta_incorreta": [
+                "True"
+            ]
+        },
+        {
+            "categoria": "Música",
+            "tipo": "boolean",
+            "dificuldade": "medio",
+            "pergunta": "3 notas formam um acorde?",
+            "resposta_correta": "True",
+            "resposta_incorreta": [
+                "False"
+            ]
+        },
+        {
+            "categoria": "Séries",
+            "tipo": "boolean",
+            "dificuldade": "medio",
+            "pergunta": "A série Stranger Things é propriedade da distribuidora Netflix?",
+            "resposta_correta": "True",
+            "resposta_incorreta": [
+                "False"
+            ]
+        },
+        {
+            "categoria": "Tecnologia",
+            "tipo": "boolean",
+            "dificuldade": "facil",
+            "pergunta": "Mark Zukenberg é um dos criadores do Facebook?",
+            "resposta_correta": "True",
+            "resposta_incorreta": [
+                "False"
+            ]
+        },
+        {
+            "categoria": "Mundo",
+            "tipo": "boolean",
+            "dificuldade": "medio",
+            "pergunta": "Elon Musk é propietario das empresas Tesla, Twitter e SpaceX?",
+            "resposta_correta": "True",
+            "resposta_incorreta": [
+                "False"
+            ]
+        }
+    ]
+}

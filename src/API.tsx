@@ -1,20 +1,20 @@
 import { shuffleArray } from "./utils";
 
 export type Pergunta = {
-    category: string;
-    correct_answer: string;
-    difficulty: string;
-    incorrect_answers: string[];
-    question: string;
-    type: string;
+    categoria: string;
+    resposta_correta: string;
+    dificuldade: string;
+    resposta_errada: string[];
+    pergunta: string;
+    tipo: string;
 };
 
 export type EstadoPergunta = Pergunta & { respostas: string[]};
 
 export enum Dificuldade {
-    FACIL = "easy",
-    MEDIO = "medium",
-    DIFICIL = "hard",
+    FACIL = "facil",
+    MEDIO = "medio",
+    DIFICIL = "dificil",
 };
 
 export const buscarPerguntasDoQuestionario = async (
@@ -26,8 +26,8 @@ export const buscarPerguntasDoQuestionario = async (
         {
             ...pergunta,
             respostas: shuffleArray([
-                ...pergunta.incorrect_answers, 
-                pergunta.correct_answer,
+                ...pergunta.resposta_errada, 
+                pergunta.resposta_correta,
             ]),
         }
     ))
